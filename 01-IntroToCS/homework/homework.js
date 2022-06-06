@@ -1,12 +1,12 @@
 'use strict'
 
 function BinarioADecimal(num) {
-  // tu codigo aca
+  // tu codigo acafdgfdgdfgfdg
 
 }
 
 function DecimalABinario(num) {
-  // tu codigo aca
+  // tu codigo acahgfhgfh
 
 }
 

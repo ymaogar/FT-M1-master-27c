@@ -19,6 +19,21 @@ function counter() {
   otroContador()      // 2
   otroContador()      // 3
    */
+  //var a=-1;
+  function counter(a){
+    a=a+1;
+    //return a;
+  }
+  const nuevoContador = counter()
+  nuevoContador()     // 1
+  nuevoContador()     // 2
+  nuevoContador()     // 3
+
+  const otroContador = counter()
+  otroContador()      // 1
+  otroContador()      // 2
+  otroContador()      // 3
+
 }
 
 function cacheFunction(cb) {
@@ -68,7 +83,9 @@ function getNombre() {
 */
 
 let getNombreInstructor;
+getNombreInstructor = getNombre.bind(instructor);
 let getNombreAlumno;
+getNombreAlumno = getNombre.bind(alumno);
 
 /*
   Ejercicio 4

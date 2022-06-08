@@ -126,8 +126,9 @@ function getFood(food) {
     }
     return snack;
 }
-
-getFood(false);
+console.log(snack); //Meow Mix
+getFood(false);     
+//undefined
 ```
 
 
@@ -147,11 +148,11 @@ var obj = {
    }
 };
 
-console.log(obj.prop.getFullname());
+console.log(obj.prop.getFullname()); //aurelio de la rosa
 
 var test = obj.prop.getFullname;
 
-console.log(test());
+console.log(test()); //juan perez
 ```
 
 ### Event loop
@@ -166,5 +167,5 @@ function printing() {
    console.log(4);
 }
 
-printing();
+printing(); //1 4 3 2
 ```

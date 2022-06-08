@@ -128,7 +128,7 @@ function getFood(food) {
 }
 console.log(snack); //Meow Mixertetret
 getFood(false);     
-//undefined
+//undefinedeeeeee
 ```
 
 

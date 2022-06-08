@@ -126,7 +126,7 @@ function getFood(food) {
     }
     return snack;
 }
-console.log(snack); //Meow Mix
+console.log(snack); //Meow Mixertetret
 getFood(false);     
 //undefined
 ```

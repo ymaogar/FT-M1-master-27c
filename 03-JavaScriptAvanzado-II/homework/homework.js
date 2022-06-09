@@ -19,20 +19,11 @@ function counter() {
   otroContador()      // 2
   otroContador()      // 3
    */
-  //var a=-1;
-  function counter(a){
-    a=a+1;
-    //return a;
+  var cont=1;
+  return function(){
+    return cont++;
+    
   }
-  const nuevoContador = counter()
-  nuevoContador()     // 1
-  nuevoContador()     // 2
-  nuevoContador()     // 3
-
-  const otroContador = counter()
-  otroContador()      // 1
-  otroContador()      // 2
-  otroContador()      // 3
 
 }
 
@@ -56,8 +47,29 @@ function cacheFunction(cb) {
   squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) 
 
   */
-}
 
+  var cache ={};
+  return function(arg){
+    if(cache.hasOwnProperty(arg)){
+      return cache[arg];
+    }else{
+      cache[arg]=cb(arg);
+      return cache[arg];
+    }
+  }
+}
+const cb =function(x){
+  return x*2;
+};
+/*
+var cache ={2: 4, 3: 6}
+const cacheCall =cacheFunction(cb);//cacheCall = funtion(arg){...}
+const val1 = cacheCall(2); //arg =2
+console.log('val1:',val1); //4
+const val2 = cacheCall(3)//arg=3
+console.log('val2: ', val2)//6
+const val3 = cacheCall(2) //4 guardado en la cache
+*/
 // Bind
 
 var instructor = {
